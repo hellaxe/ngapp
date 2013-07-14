@@ -1,10 +1,10 @@
 <div class="content-placeholder" ng-controller="GalleryCtrl">
-	<ul class="thumbnails">
-		<li class="span3" ng-repeat="image in images">
-			<a ng-click="showImage(image)" class="thumbnail">
-			<img ng-src="{{image.url}}">
-		</a>
-			<h3>{{image.name}}</h3>
-		</li>
-	</ul>
+  <ul class="thumbnails">
+    <li class="span3" ng-repeat="image in images">
+      <a ng-click="showImage(image)" class="thumbnail">
+      <img ng-src="{{image.url}}">
+    </a>
+      <h3>{{image.name}}</h3>
+    </li>
+  </ul>
 </div>

@@ -1,29 +1,29 @@
 <div class="content-placeholder" ng-controller="HomeCtrl">
 
-	<h2>Add new Entry: </h2>
-	<form ng-submit="addEntry()">
-		<fieldset>
-			<input required ng-model="name" type="text" placeholder="Name" ></br>
-			<input required ng-model="age" type="text" placeholder="Age"></br>
-			<input type="submit" class="btn btn-success" value="Add">
-	</fieldset>
-	</form>
-	<h2>Entries: </h2>
-	<table class="table table-hover table-bordered no-select">
-		<tr>
-			<td><b>Name:</b></td>
-			<td><b>Age:</b></td>
-			<td><b>Actions:</b></td>
-		</tr>
-		<tr class="entry tr-colored" ng-repeat="entry in list">
-			<td>{{entry.name}}</td>
-			<td>{{entry.age}}</td>
-			<td width=175>
-				<button class="btn btn-info"><i class="icon-file"></i>&nbspEdit</button>
-				<button type="button" class="btn btn-danger" ng-click="deleteEntry(entry)"><i class="icon-remove"></i>&nbspDelete</button>
-			</td>
-		</tr>
+  <h2>Add new Entry: </h2>
+  <form ng-submit="addEntry()">
+    <fieldset>
+      <input required ng-model="name" type="text" placeholder="Name" ></br>
+      <input required ng-model="age" type="text" placeholder="Age"></br>
+      <input type="submit" class="btn btn-success" value="Add">
+  </fieldset>
+  </form>
+  <h2>Entries: </h2>
+  <table class="table table-hover table-bordered no-select">
+    <tr>
+      <td><b>Name:</b></td>
+      <td><b>Age:</b></td>
+      <td><b>Actions:</b></td>
+    </tr>
+    <tr class="entry tr-colored" ng-repeat="entry in list">
+      <td>{{entry.name}}</td>
+      <td>{{entry.age}}</td>
+      <td width=175>
+        <button class="btn btn-info"><i class="icon-file"></i>&nbspEdit</button>
+        <button type="button" class="btn btn-danger" ng-click="deleteEntry(entry)"><i class="icon-remove"></i>&nbspDelete</button>
+      </td>
+    </tr>
 
-	</table>
+  </table>
 
 </div>
