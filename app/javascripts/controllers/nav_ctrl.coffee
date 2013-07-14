@@ -9,12 +9,8 @@ myApp.controller('NavCtrl', ['$scope','$location', ($scope, $location) ->
 	$scope.setActive = () ->
 		currentRoute = $location.path().substring(1) || '/'
 		$($scope.items).each (i,v) ->
-			if v.path is currentRoute
-				v.class = 'active'
-			else
-				v.class = ''
+			v.class = if v.path is currentRoute then 'active' else ''
 		
-
 	$scope.$on("$routeChangeSuccess", ($currentRoute, $previousRoute) ->
     $scope.setActive()
   )

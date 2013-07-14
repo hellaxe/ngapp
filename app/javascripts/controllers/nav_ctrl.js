@@ -28,11 +28,7 @@ myApp.controller('NavCtrl', [
       var currentRoute;
       currentRoute = $location.path().substring(1) || '/';
       return $($scope.items).each(function(i, v) {
-        if (v.path === currentRoute) {
-          return v["class"] = 'active';
-        } else {
-          return v["class"] = '';
-        }
+        return v["class"] = v.path === currentRoute ? 'active' : '';
       });
     };
     return $scope.$on("$routeChangeSuccess", function($currentRoute, $previousRoute) {
