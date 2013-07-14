@@ -1,7 +1,6 @@
 myApp.directive("ngDraggable", () ->
   (scope, element, attr) ->
 
-
     move = (event) ->
       element[0].style.top = event.y - 15 + "px"
       element[0].style.left = event.x - 20 + "px"
