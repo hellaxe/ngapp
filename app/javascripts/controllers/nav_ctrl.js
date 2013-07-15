@@ -8,9 +8,9 @@ myApp.controller('NavCtrl', [
         path: '/',
         "class": ''
       }, {
-        url: '#/entries',
-        name: 'Entries',
-        path: 'entries',
+        url: '#/champions',
+        name: 'Champions',
+        path: 'champions',
         "class": ''
       }, {
         url: '#/gallery',

@@ -9,9 +9,9 @@ myApp.config([
       controller: 'GalleryCtrl'
     }).when('/gallery/:imageId', {
       templateUrl: 'app/templates/gallery_image.html'
-    }).when('/entries', {
-      templateUrl: 'app/templates/entries.html',
-      controller: 'HomeCtrl'
+    }).when('/champions', {
+      templateUrl: 'app/templates/champions.html',
+      controller: 'ChampionsIndexCtrl'
     }).when('/404', {
       templateUrl: 'app/templates/error_404.html',
       controller: 'ErrorCtrl'

@@ -1,7 +1,7 @@
 myApp.controller('NavCtrl', ['$scope','$location', ($scope, $location) ->
   $scope.items = [
     {url: '#/', name: 'Home', path: '/', class: ''}
-    {url: '#/entries', name: 'Entries', path: 'entries', class: ''}
+    {url: '#/champions', name: 'Champions', path: 'champions', class: ''}
     {url: '#/gallery', name: 'Gallery', path: 'gallery', class: ''}
     {url: '#/about', name: 'About', path: 'about', class: ''}
   ]

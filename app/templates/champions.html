@@ -1,0 +1,30 @@
+<div class="content-placeholder" ng-controller="ChampionsIndexCtrl">
+  <input ng-model="term.name" type="text" placeholder="Search in names only:" ></br>
+  <select ng-model="query">
+    <option value="" selected>Show all</option>
+    <option value="ad carry">AD Carry</option>
+    <option value="middle lane">Middle Lane</option>
+  </select>
+  <h2>Champions: </h2>
+  <table class="table table-hover table-bordered no-select">
+    <tr>
+      <td></td>
+      <td><b>Name:</b></td>
+      <td><b>RP cost:</b></td>
+      <td><b>IP cost:</b></td>
+      <td><b>Lane:</b></td>
+      <td><b>Released:</b></td>
+    </tr>
+    <tr class="entry tr-colored" ng-repeat="champion in champions | orderBy:sortOrder | filter:query | filter:term">
+      <td width="32"><img ng-src="{{champion.thumb_url}}"></td>
+      <td>{{champion.name}}</td>
+      <td><img ng-src="public/images/logos/rp_logo.png">&nbsp{{champion.rp_cost}}</td>
+      <td><img ng-src="public/images/logos/ip_logo.png">&nbsp{{champion.ip_cost}}</td>
+      <td>{{champion.lane}}</td>
+      <td>{{champion.released}}</td>
+      
+    </tr>
+
+  </table>
+
+</div>
